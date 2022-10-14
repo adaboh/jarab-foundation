@@ -1,0 +1,98 @@
+// * UTILITIES
+.plr-1 {
+  padding: 0 1em;
+}
+
+.ptb-1 {
+  padding: 1rem 0;
+}
+
+.mtb-2 {
+  margin: 2rem 0;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.8rem;
+}
+
+.pb-0 {
+  padding-bottom: 0rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// * VARIABLES -- Theme and colors
+$mainBlack: #000;
+$mainWhite: #fff;
+$mainRed: #ff3333;
+$dogerBlue: #18a0fb;
+$danube: #568fd0;
+$pureCyan: #00aee2;
+$darkBlue: #222326;
+$darkerBlue: #212529;
+$ligthgray1: #ccc;
+$twitterColor: #1da1f2;
+$facebookColor: #4267b2;
+$whatsappColor: #075e54;
+$linkedinColor: #0e76a8;
+
+$bckgrd1: linear-gradient(90deg, $dogerBlue, $pureCyan);
+$bckgrd: linear-gradient(to top, #2193b0, #6dd5ed);
+
+// * MIXINS -- media queries
+//MEDIA QUERRY MANAGER ---BOOTSTRAP QUERRIES///////////////////
+// landscape phones -- 567px
+@mixin phone-sm {
+  // landscape phones -- 576px up
+  @media only screen and (max-width: 20em) {
+    @content;
+  }
+}
+
+@mixin phone-land {
+  // landscape phones -- 576px up
+  @media only screen and (min-width: 36em) {
+    @content;
+  }
+}
+@mixin tab-port {
+  // tablet portrait ---- 767px up
+  @media only screen and (min-width: 48em) {
+    @content;
+  }
+}
+@mixin tab-land {
+  // tablet landscape  ---- 992px up
+  @media only screen and (min-width: 62em) {
+    @content;
+  }
+}
+@mixin desktop {
+  // desktops ------ >1200px up
+  @media only screen and (min-width: 75em) {
+    @content;
+  }
+}
+
+@mixin verticalHeight {
+  @media only screen and (min-height: 75em) {
+    @content;
+  }
+}
+
+@mixin easeOut {
+  transition: all 0.8s ease-out;
+}
