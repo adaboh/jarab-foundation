@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon_io/site.webmanifest">
   <link rel="stylesheet" href="css/main.css">
   <title>Jarab Foundation</title>
 </head>
@@ -13,38 +17,49 @@
   <header class="header">
     <div class="header--area">
       <div class="row">
-        <div class="column">
-          <ul class="text-center">
-            <li><a href="#!">+233 (244) 111-111</a></li>
-            <li><a href="#!">info@jarabfoundation.org</a></li>
+        <div class="six columns">
+          <ul class="text-center mb-0">
+            <li><a href="#!" class="header--area-link">+233 (244) 111-111</a></li>
+            <li><a href="#!" class="header--area-link">info@jarabfoundation.org</a></li>
+          </ul>
+        </div>
+        <div class="six columns d--none">
+          <ul>
+            <li><a href="#!">face</a></li>
+            <li><a href="#!">lin</a></li>
+            <li><a href="#!">twi</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="header--sticky">
       <div class="header--logo">
-        <a href="/" class="home-page">
-          <!-- <img src="logo.jpeg" class="logo" alt=""> -->
+        <a href="/" class="">
+          <img src="images/logo-edits.png" class="header--logo-img" alt="Jarab Foundation">
+          <!-- <img src="images/logo.png" class="header--logo-img" alt=""> -->
         </a>
       </div>
-      <nav class="nav">
-        <ul class="ul">
-          <li><a href="#!" class="list">ABOUT</a></li>
-          <li><a href="#!" class="list">PROGRAMS</a></li>
-          <li><a href="#!" class="list">PROJECTS</a></li>
-          <li><a href="#!" class="list">CONTACT</a></li>
-          <li><a href="#!" class="split">DONATE</a></li>
+      <nav class="nav mobile--nav">
+        <ul class="nav--ul">
+          <li class="nav--list"><a href="#!" class="nav--link">Donate</a></li>
+          <li class="nav--list"><a href="#!" class="nav--link">About</a></li>
+
+          <li class="nav--list"><a href="#!" class="nav--link">Programs</a></li>
+          <li class="nav--list"><a href="#!" class="nav--link">Contact</a></li>
         </ul>
       </nav>
 
+      <button class="hamburger lg--hidden hamburger--spring">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
 
     </div>
   </header>
 
 
-
-
-
+  <script src="scripts/app.js"></script>
 </body>
 
 </html>

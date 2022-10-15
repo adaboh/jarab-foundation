@@ -6,6 +6,15 @@
   box-sizing: inherit;
 }
 
-// .text-center {
-// text-align: center;
-// }
+html,
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-size: 62.5%;
+}
+li {
+  list-style: none;
+}

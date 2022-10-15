@@ -1,4 +1,7 @@
 // * UTILITIES
+.d--none {
+  display: none;
+}
 .plr-1 {
   padding: 0 1em;
 }
@@ -24,6 +27,10 @@
 
 .mb-1 {
   margin-bottom: 0.8rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .pb-0 {
@@ -64,7 +71,7 @@ $bckgrd: linear-gradient(to top, #2193b0, #6dd5ed);
 
 @mixin phone-land {
   // landscape phones -- 576px up
-  @media only screen and (min-width: 36em) {
+  @media only screen and (min-width: 57.6rem) {
     @content;
   }
 }

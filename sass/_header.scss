@@ -1,0 +1,213 @@
+// * Mobile navigation - hamburger
+
+.header {
+  &--sticky {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid #bbb;
+
+    @include tab-land {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
+
+  &--logo {
+    // border: 2px solid blue;
+    height: 7rem;
+    padding: 6px;
+    &-img {
+      width: 5rem;
+
+      @include phone-land {
+        // width: 7rem;
+      }
+    }
+  }
+
+  &--area {
+    &-link {
+      text-decoration: none;
+      font-size: 1.4rem;
+      // padding: 1rem 0rem;
+      display: inline-block;
+    }
+    & li {
+      margin-bottom: 0;
+      padding: 4px 3px;
+
+      border: 1px solid blue;
+    }
+  }
+}
+
+.nav {
+  // border: 3px dotted orange;
+  background-color: #eee;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 60%;
+  transform-origin: right;
+  transform: scale(0, 1);
+  text-align: center;
+  transition: transform 350ms ease-in;
+
+  @include phone-land {
+    transform: scale(1, 1);
+    width: unset;
+    background-color: transparent;
+    top: unset;
+    // top: 40%;
+    // position: relative;
+
+    // display: flex;
+    // right: 100%;
+    // text-align: left;
+  }
+
+  &--ul {
+    text-align: center;
+    margin-bottom: 0;
+
+    @include phone-land {
+      display: flex;
+      // align-items: center;
+      // justify-content: space-around;
+
+      // border: 1px solid red;
+    }
+  }
+
+  &--list {
+    line-height: 1;
+    @include phone-land {
+      margin: -2px 2rem;
+      // padding: 0 1rem;
+      // border: 1px dotted gray;
+    }
+  }
+
+  &--link {
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 0rem;
+    display: inline-block;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 250ms ease;
+
+    @include phone-land {
+      opacity: 1;
+      padding: 2px 4px;
+
+      // border: 1px solid green;
+      // display: inline-flex;
+    }
+    &:hover {
+      color: gold;
+    }
+  }
+
+  &.is-active {
+    // transition: transform 200ms ease-in;
+    transform: scale(1, 1);
+    & .nav--link {
+      opacity: 1;
+    }
+  }
+}
+
+.hamburger {
+  margin: 0; // overides skeleton default margin
+  border: 0;
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  color: inherit;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+
+  &-box {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2.4rem;
+    // border: 1px dotted red;
+  }
+
+  &-line {
+    display: block;
+    margin-top: -2px;
+    top: 2px;
+    transition: background-color 0s linear 0.13s;
+
+    &,
+    &::before,
+    &::after {
+      position: absolute;
+      width: 3.5rem;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #000;
+      content: "";
+      display: block;
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+      transition-property: transform;
+    }
+
+    &::before {
+      top: 10px;
+      width: 4rem;
+      transition: top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    &::after {
+      top: 20px;
+      transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+
+  &:hover,
+  &.is-active:hover {
+    opacity: 0.7;
+  }
+
+  //* toggle transitions
+  &--spring.is-active .hamburger-line {
+    transition-delay: 0.22s;
+    background-color: transparent !important;
+
+    &::before {
+      top: 0;
+      transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s,
+        transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+      transform: translate3d(0, 10px, 0) rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+      width: 4rem;
+      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+      transform: translate3d(0, 10px, 0) rotate(-45deg);
+    }
+  }
+  @include phone-land {
+    display: none;
+  }
+}
+
+// * media queries
