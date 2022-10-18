@@ -70,30 +70,31 @@ $bckgrd: linear-gradient(to top, #2193b0, #6dd5ed);
 }
 
 @mixin phone-land {
-  // landscape phones -- 576px up
-  @media only screen and (min-width: 57.6rem) {
+  //sm in bs
+  @media only screen and (min-width: 576px) {
     @content;
   }
 }
 @mixin tab-port {
-  // tablet portrait ---- 767px up
-  @media only screen and (min-width: 48em) {
+  //md in bs
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
 @mixin tab-land {
-  // tablet landscape  ---- 992px up
-  @media only screen and (min-width: 62em) {
+  //lg in bs
+  @media only screen and (min-width: 992px) {
     @content;
   }
 }
 @mixin desktop {
-  // desktops ------ >1200px up
-  @media only screen and (min-width: 75em) {
+  //xl in bs
+  @media only screen and (min-width: 1200px) {
     @content;
   }
 }
 
+//* vertical layout
 @mixin verticalHeight {
   @media only screen and (min-height: 75em) {
     @content;

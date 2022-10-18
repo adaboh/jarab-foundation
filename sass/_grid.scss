@@ -1,7 +1,49 @@
-.row {
-  border: 1px solid red;
+//! Redefining bootstrap grid system
+%wrapper {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container {
+  @extend %wrapper;
+
+  @include phone-land {
+    max-width: 540px;
+  }
+  @include tab-port {
+    max-width: 720px;
+  }
+  @include tab-land {
+    max-width: 960px;
+  }
+  @include desktop {
+    max-width: 1140px;
+  }
+  &--fluid {
+    @extend %wrapper;
+  }
 }
 
-.columns {
-  border: 1px dotted blue;
+.row {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-sm-6 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  @include phone-land {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  // border: 1px dotted blue;
 }

@@ -9,9 +9,9 @@
     border-bottom: 1px solid #bbb;
 
     @include tab-land {
-      width: 100%;
-      max-width: 960px;
-      margin: 0 auto;
+      // width: 100%;
+      // max-width: 960px;
+      // margin: 0 auto;
     }
   }
 
@@ -39,7 +39,7 @@
       margin-bottom: 0;
       padding: 4px 3px;
 
-      border: 1px solid blue;
+      // border: 1px solid blue;
     }
   }
 }
@@ -209,5 +209,11 @@
     display: none;
   }
 }
+.social-media--links {
+  display: none;
 
+  @include phone-land {
+    display: block;
+  }
+}
 // * media queries
