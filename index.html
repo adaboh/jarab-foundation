@@ -15,50 +15,165 @@
 
 <body>
   <header class="header">
-    <div class="header--area">
+    <div class="header__top">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <ul class="text-center mb-0">
-              <li><a href="#!" class="header--area-link">+233 (244) 111-111</a></li>
-              <li><a href="#!" class="header--area-link">info@jarabfoundation.org</a></li>
+        <div class="row ">
+          <div class="col-sm-6 ">
+            <ul class="text-center mb-0 header__top-mobile-only">
+              <li>
+                <a href="#!" class="header__top--link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z" />
+                  </svg>
+                  <span>+233 (244) 111-111
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="header__top--link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
+                  </svg>
+                  <span>info@jarabfoundation.org</span>
+
+                </a>
+              </li>
             </ul>
           </div>
-          <div class="col-sm-6 ">
-            <ul class="social-media--links">
-              <li><a href="#!">face</a></li>
-              <li><a href="#!">lin</a></li>
-              <li><a href="#!">twi</a></li>
+          <div class="col-sm-6 col-sm-bem">
+            <ul class="header__top--socials">
+              <li><a href="#!">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                </a></li>
+              <li><a href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                  </svg></a></li>
+              <li><a href="#!">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                  </svg>
+                </a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="header--sticky container">
-      <div class="header--logo">
-        <a href="/" class="">
-          <img src="images/logo-edits.png" class="header--logo-img" alt="Jarab Foundation">
-          <!-- <img src="images/logo.png" class="header--logo-img" alt=""> -->
-        </a>
+    <div class="header--sticky" id="header--sticky">
+      <div class="container header-wrap">
+        <div class="header--logo">
+          <a href="/" class="">
+            <img src="images/logo-edits.png" class="header--logo-img" alt="Jarab Foundation">
+            <!-- <img src="images/logo.png" class="header--logo-img" alt=""> -->
+          </a>
+        </div>
+        <nav class="nav mobile--nav">
+          <ul class="nav--ul">
+            <li class="nav__list"><a href="#!" class="nav__link">Donate</a></li>
+            <li class="nav__list"><a href="#!" class="nav__link">About</a></li>
+
+            <li class="nav__list"><a href="#!" class="nav__link">Programs</a></li>
+            <li class="nav__list"><a href="#!" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="hamburger lg--hidden hamburger--spring">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
       </div>
-      <nav class="nav mobile--nav">
-        <ul class="nav--ul">
-          <li class="nav--list"><a href="#!" class="nav--link">Donate</a></li>
-          <li class="nav--list"><a href="#!" class="nav--link">About</a></li>
-
-          <li class="nav--list"><a href="#!" class="nav--link">Programs</a></li>
-          <li class="nav--list"><a href="#!" class="nav--link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <button class="hamburger lg--hidden hamburger--spring">
-        <span class="hamburger-box">
-          <span class="hamburger-line"></span>
-        </span>
-      </button>
-
     </div>
   </header>
+
+  <!--? section hero begins here -->
+  <main class="main">
+    <section class="hero">
+      <!-- <div class="hero--bg"> -->
+      <div class="container">
+        <h1 class="text-center hero__text">
+          <span class="hero__text-main">
+            Jarab Foundation
+          </span>
+          <span class="hero__text-sub">
+            Mentors and support underprivileged students to pursue tertiary education
+          </span>
+        </h1>
+        <div class="hero__cta">
+          <button class="btn btn--hero-learn" info="desktop-only">Learn More</button>
+          <button class="btn btn--hero-donate" info="mobile-only">Donate</button>
+          <button class="btn btn--hero-volunter" info="mobile-only">Volunter</button>
+        </div>
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <section class="about">
+      <h2 class="about__title">About JARAB</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 about__text">
+            <p>
+              In 2019, JARAB Foundation conducted an inquiry into the tenets of poverty in underserved communities in
+              Ghana and how it can be eradicated. They discovered that the low sense of achievement and financial
+              challenges aggravates poverty in these communities. </p>
+            <p>That is, due to the low sense of achievement and
+              financial challenges, the majority of the children do not pursue tertiary education, thereby reducing
+              their chances of harnessing their dreams and aspirations, and also of getting lucrative jobs to improve
+              their standard of living to contribute to socio-economic development in their families and the
+              community.</p>
+            <p>This means tackling the issue of the low sense of achievement among children in these
+              communities and supporting them financially to pursue tertiary education can contribute to eradicating
+              poverty in underserved communities and the world. This inspired the JARAB initiative.
+              The JARAB foundation seeks to address the issue of the low sense of achievement among children in rural
+              communities in Ghana to contribute to the reduction of poverty.</p>
+            <p>
+              We engage the basic and the senior high
+              school students in the rural communities in Ghana in innovative mentorship initiatives and advocates to
+              empower these children to look beyond their current state and then strife to actualize their dreams and
+              aspirations to turn the tide of poverty in their families, community and the world at large. Projects at
+              JARAB Foundation include; Peer Mentorship, Back to School Donation, Campaign for zero teenage pregnancy,
+              Career coaching, and Menstrual Hygiene campaigns.
+            </p>
+          </div>
+          <div class="col-sm-6 about__mission">
+            <!-- *first accordion -->
+            <div class="about__accordion">
+              <h4 class="about__accordion--title">
+                Our Goal
+              </h4>
+              <div class="about__accordion--contents ">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatum, numquam repudiandae maiores adipisci sunt recusandae natus illo facere molestiae.
+              </div>
+            </div>
+            <!-- *2nd accordion -->
+            <div class="about__accordion">
+              <h4 class="about__accordion--title">
+                Our Mission
+              </h4>
+              <div class="about__accordion--contents">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatum, numquam repudiandae maiores adipisci sunt recusandae natus illo facere molestiae.
+              </div>
+            </div>
+            <!-- *3rd accordion -->
+            <div class="about__accordion">
+              <h4 class="about__accordion--title">
+                Our Vision
+              </h4>
+              <div class="about__accordion--contents ">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatum, numquam repudiandae maiores adipisci sunt recusandae natus illo facere molestiae.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- this is a footer -->
+  </footer>
 
 
   <script src="scripts/app.js"></script>

@@ -5,8 +5,15 @@
   padding: 0;
   box-sizing: inherit;
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 html {
   font-size: 62.5%;
+  height: 200vh;
 }
 body {
   box-sizing: border-box;
@@ -14,14 +21,19 @@ body {
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
+  overflow-y: auto;
+  // overflow-x: hidden;
+  // width: 100vw;
 }
 
 li {
   list-style: none;
 }
 a {
-  color: #1eaedb;
+  color: $mainBlack;
 }
+
+// color: #1eaedb;
 
 .button,
 button,
@@ -44,4 +56,19 @@ input[type="button"] {
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
 }

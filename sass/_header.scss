@@ -1,18 +1,38 @@
 // * Mobile navigation - hamburger
 
 .header {
+  // position: sticky;
+  // top: 10px;
   &--sticky {
+    background-color: $appleGreen;
+    position: relative;
+    border-radius: 4px;
+    z-index: 5;
+    margin: 0 1.2rem;
+
+    &.sticky-scroll {
+      box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
+      position: fixed;
+      width: 100%;
+      top: -70px;
+      left: 0;
+      right: 0;
+      z-index: 9;
+      transform: translateY(70px);
+      transition: transform 500ms ease, background 500ms ease;
+      -webkit-transition: transform 500ms ease, background 500ms ease;
+      box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
+      margin: 0;
+      // background: #3cc78f;
+      // bottom: auto;
+    }
+  }
+
+  &-wrap {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    position: relative;
-    border-bottom: 1px solid #bbb;
-
-    @include tab-land {
-      // width: 100%;
-      // max-width: 960px;
-      // margin: 0 auto;
-    }
   }
 
   &--logo {
@@ -28,17 +48,18 @@
     }
   }
 
-  &--area {
-    &-link {
+  &__top {
+    @include tab-land {
+      margin: 1rem 0;
+    }
+    &--link {
       text-decoration: none;
       font-size: 1.4rem;
-      // padding: 1rem 0rem;
       display: inline-block;
     }
     & li {
       margin-bottom: 0;
       padding: 4px 3px;
-
       // border: 1px solid blue;
     }
   }
@@ -46,7 +67,7 @@
 
 .nav {
   // border: 3px dotted orange;
-  background-color: #eee;
+  background-color: #e6e6e6;
   position: absolute;
   right: 0;
   top: 100%;
@@ -82,7 +103,7 @@
     }
   }
 
-  &--list {
+  &__list {
     line-height: 1;
     @include phone-land {
       margin: -2px 2rem;
@@ -91,7 +112,7 @@
     }
   }
 
-  &--link {
+  &__link {
     text-decoration: none;
     font-size: 1.8rem;
     padding: 1rem 0rem;
@@ -108,14 +129,17 @@
       // display: inline-flex;
     }
     &:hover {
-      color: gold;
+      color: #1eaedb;
+      @include phone-land {
+        color: $mainGold;
+      }
     }
   }
 
   &.is-active {
     // transition: transform 200ms ease-in;
     transform: scale(1, 1);
-    & .nav--link {
+    & .nav__link {
       opacity: 1;
     }
   }
@@ -209,11 +233,55 @@
     display: none;
   }
 }
-.social-media--links {
+
+.col-sm-bem {
+  // @extend %dbug-2-blue;
+  display: inline-flex;
+  align-items: center;
+  // justify-content: center;
+}
+
+.header__top--socials {
   display: none;
 
+  // display: flex;
+  // justify-content: space-between;
+
   @include phone-land {
+    // @extend %dbug-1-red;
     display: block;
+    margin-left: auto;
+  }
+  & li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
   }
 }
+
+svg {
+  // font-size: 3rem;
+  // fill: $appleGreen;
+  width: 1.5rem;
+  height: 1.5rem;
+  // margin-right: 1.2rem;
+}
 // * media queries
+
+.header__top-mobile-only {
+  @include tab-land {
+    display: flex;
+    justify-content: space-around;
+  }
+  & a {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & span {
+      margin-left: 1rem;
+    }
+  }
+}

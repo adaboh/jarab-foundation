@@ -42,23 +42,12 @@
 }
 
 // * VARIABLES -- Theme and colors
-$mainBlack: #000;
+$mainGold: #ffd700; //light
+$appleGreen: #96a641; //dark
 $mainWhite: #fff;
-$mainRed: #ff3333;
-$dogerBlue: #18a0fb;
-$danube: #568fd0;
-$pureCyan: #00aee2;
-$darkBlue: #222326;
-$darkerBlue: #212529;
-$ligthgray1: #ccc;
-$twitterColor: #1da1f2;
-$facebookColor: #4267b2;
-$whatsappColor: #075e54;
-$linkedinColor: #0e76a8;
-
-$bckgrd1: linear-gradient(90deg, $dogerBlue, $pureCyan);
-$bckgrd: linear-gradient(to top, #2193b0, #6dd5ed);
-
+$mainBlack: #000;
+// $bckgrd1: linear-gradient(90deg, $dogerBlue, $pureCyan);
+// $bckgrd: linear-gradient(to top, #2193b0, #6dd5ed);
 // * MIXINS -- media queries
 //MEDIA QUERRY MANAGER ---BOOTSTRAP QUERRIES///////////////////
 // landscape phones -- 567px
@@ -103,4 +92,67 @@ $bckgrd: linear-gradient(to top, #2193b0, #6dd5ed);
 
 @mixin easeOut {
   transition: all 0.8s ease-out;
+}
+
+// * DEbug borders
+%dbug-1-red {
+  border: 1px solid red;
+}
+
+%dbug-2-red {
+  border: 2px solid red;
+}
+
+%dbug-1-blue {
+  border: 1px dotted blue;
+}
+
+%dbug-2-blue {
+  border: 2px dotted blue;
+}
+
+//animation
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+
+  80% {
+    transform: translateX(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem);
+  }
+
+  80% {
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

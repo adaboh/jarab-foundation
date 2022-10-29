@@ -1,0 +1,106 @@
+.hero {
+  // @extend %dbug-2-red;
+  height: calc(100vh - 10em);
+  min-height: 40rem;
+  position: relative;
+  z-index: 1;
+  @include phone-land {
+    height: calc(100vh - 7em);
+  }
+  background-image: url(../images/students.jpg);
+  // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 239, 186, 0.8));
+
+  // url(../images/students.jpg);
+
+  // url(../images/students.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  margin-top: -4.5rem;
+  &::before {
+    background-color: rgba(255, 239, 186, 0.58);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+  }
+
+  & [class^="hero__text"] {
+    display: block;
+  }
+  &__text {
+    margin-top: 5.5rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-main {
+      font-size: 3.5rem;
+      font-weight: 400;
+      letter-spacing: 0.5rem;
+      margin-bottom: 2rem;
+      animation: moveInLeft 250ms ease-out;
+      @include phone-land {
+        font-size: 5rem;
+      }
+    }
+    &-sub {
+      font-size: 2rem;
+      animation: moveInRight 250ms ease-out;
+      @include phone-land {
+        font-size: 3rem;
+      }
+      // display: block;
+    }
+  }
+  &__cta {
+    // border: 1px solid red;
+    position: absolute;
+    bottom: 10%;
+    // left: 30%;
+    // transform: translate(-50%, -50%);
+    // display: flex;
+    // width: 90%;
+    // justify-content: space-around;
+    // align-items: center;
+  }
+}
+
+.btn {
+  background-color: $mainGold;
+  margin-right: 5rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $appleGreen;
+    color: #fff;
+  }
+
+  &:active {
+    transform: translate(1%, 3px);
+    // box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  }
+  &--hero {
+    &-learn {
+      display: none;
+      @include phone-land {
+        display: inline-block;
+      }
+    }
+    &-donate {
+      @include phone-land {
+        display: none;
+      }
+    }
+    &-volunter {
+    }
+
+    & button[class*="hero"] {
+      color: red;
+    }
+  }
+}

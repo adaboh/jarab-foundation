@@ -1,0 +1,73 @@
+.about {
+  &__title {
+    margin: 6rem auto;
+    text-align: center;
+    position: relative;
+    width: max-content;
+    padding: 4px 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    // padding: 0.5rem 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      height: 100%;
+      background-color: #ccc;
+      clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+    }
+  }
+
+  &__text {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+
+    & p {
+      // padding: 1rem 5rem 0;
+      // width: max-content;
+    }
+  }
+
+  &__mission {
+    border: 2px dotted grey;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+  }
+
+  &__accordion {
+    // flex: 0 0 200px;
+    // display: flex;
+    width: 50%;
+    max-width: 400px;
+    &--title {
+      border-bottom: 1px solid #eee;
+      color: red;
+      line-height: 1.5;
+      font-size: 2rem;
+      border: 1px solid red;
+      flex: 50%;
+      cursor: pointer;
+    }
+
+    &--contents {
+      display: none;
+      // display: inline-flex;
+      // flex: 0 0 300px;
+      // display: none;
+    }
+  }
+}
+
+.container {
+  // border: 2px dotted blue;
+}
+
+.accordion-active {
+  // display: block;
+  background-color: #ccc;
+}

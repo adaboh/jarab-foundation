@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass-compile": "sass --watch sass:css -q",
-    "devserver": "live-server --port=8091 -q --no-browser",
+    "devserver": "live-server --port=8091 -q --no-browser ",
     "start": "npm-run-all --parallel devserver sass-compile"
   },
   "author": "Kae",
