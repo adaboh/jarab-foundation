@@ -55,3 +55,20 @@ for (let i = 0; i < accordionTitles.length; i++) {
     }
   });
 }
+
+// * Carousel scripts
+
+const track = document.querySelector(".carousel__track");
+const slides = Array.from(track.children);
+
+const nextButton = document.querySelector(".carousel__btn--right");
+const prevButton = document.querySelector(".carousel__btn--left");
+
+const dotsNav = document.querySelector(".carousel__nav");
+const dots = Array.from(dotsNav.children);
+
+const slideSize = slides[0].getBoundingClientRect();
+const slideWidth = slideSize.width;
+// console.log(slideSize);
+//click left move slid to the left
+console.log("some nice");
