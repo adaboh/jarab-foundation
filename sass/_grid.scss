@@ -33,15 +33,28 @@
   margin-left: -15px;
 }
 
-.col-sm-6 {
+%grid-framwork {
   position: relative;
   width: 100%;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.col-sm-6 {
+  @extend %grid-framwork;
   @include phone-land {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .col-md-4 {
+    @extend %grid-framwork;
+
+    @include tab-port {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
   }
 
   // border: 1px dotted blue;
