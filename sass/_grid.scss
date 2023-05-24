@@ -47,15 +47,13 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
-
-  .col-md-4 {
-    @extend %grid-framwork;
-
-    @include tab-port {
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
-    }
-  }
-
   // border: 1px dotted blue;
+}
+
+.col-md-4 {
+  @extend %grid-framwork;
+  @include tab-port {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
 }
