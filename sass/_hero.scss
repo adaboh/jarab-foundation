@@ -43,6 +43,7 @@
       font-weight: 400;
       letter-spacing: 0.5rem;
       margin-bottom: 2rem;
+
       animation: moveInLeft 250ms ease-out;
       @include phone-land {
         font-size: 5rem;
@@ -50,6 +51,7 @@
     }
     &-sub {
       font-size: 2rem;
+
       animation: moveInRight 250ms ease-out;
       @include phone-land {
         font-size: 3rem;
@@ -92,6 +94,7 @@
       }
     }
     &-donate {
+      display: none;
       @include phone-land {
         display: none;
       }
@@ -103,4 +106,9 @@
       color: red;
     }
   }
+}
+
+div.hero_cta {
+  display: flex;
+  justify-content: space-between;
 }
